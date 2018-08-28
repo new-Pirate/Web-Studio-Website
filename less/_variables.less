@@ -1,0 +1,69 @@
+@esFrom: 0;
+@esTo: 575px;
+@smFrom: 576px;
+@smTo: 767px;
+@mdFrom: 768px;
+@mdTo: 991px;
+@lgFrom: 992px;
+@lgTo: 1199px;
+@xlFrom: 1200px;
+
+.respondToUp(@device, @content) {
+  & when (@device = es-desktops) {
+    @media (min-width: @esFrom) { @content(); }
+  }
+  & when (@device = sm-desktops) {
+    @media (min-width: @smFrom) { @content(); }
+  }
+  & when (@device = md-desktops) {
+    @media (min-width: @mdFrom) { @content(); }
+  }
+  & when (@device = lg-desktops) {
+    @media (min-width: @lgFrom) { @content(); }
+  }
+  & when (@device = xl-desktops) {
+    @media (min-width: @xlFrom) { @content(); }
+  }
+}
+
+.respondToDown(@device, @content) {
+  & when (@device = es-desktops) {
+    @media (max-width: @esFrom) { @content(); }
+  }
+  & when (@device = sm-desktops) {
+    @media (max-width: @smFrom) { @content(); }
+  }
+  & when (@device = md-desktops) {
+    @media (max-width: @mdFrom) { @content(); }
+  }
+  & when (@device = lg-desktops) {
+    @media (max-width: @lgFrom) { @content(); }
+  }
+  & when (@device = xl-desktops) {
+    @media (max-width: @xlFrom) { @content(); }
+  }
+}
+
+.respondToOnly(@device, @content) {
+  & when (@device = es-desktops) {
+    @media (max-width: @esTo) { @content(); }
+  }
+  & when (@device = sm-desktops) {
+    @media (min-width: @smFrom) and (max-width: @smTo) { @content(); }
+  }
+  & when (@device = md-desktops) {
+    @media (min-width: @mdFrom) and (max-width: @mdTo) { @content(); }
+  }
+  & when (@device = lg-desktops) {
+    @media (min-width: @lgFrom) and (max-width: @lgTo) { @content(); }
+  }
+  & when (@device = xl-desktops) {
+    @media (min-width: @xlFrom) { @content(); }
+  }
+}
+
+.respondCustom(@_minWidth, @_maxWidth, @_styles) {
+  @media all and (min-width: @_minWidth) and (max-width: @_maxWidth) {
+    @_styles();
+  }
+}

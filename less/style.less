@@ -1,6 +1,97 @@
 @import "_variables.less";
 
 @font-face {
-    font-family: "";
-    src: url(../fonts/.ttf)
+    font-family: "Lato-Regular";
+    src: url(../fonts/Lato-Regular.ttf);
 }
+
+@font-face {
+    font-family: "Open-Sans-Regular";
+    src: url(../fonts/Open-Sans-Regular.ttf)
+}
+
+@font-face {
+    font-family: "Open-Sans-Semibold";
+    src: url(../fonts/Open-Sans-Semibold.ttf)
+}
+
+.headerWrap {
+    background-color: #000;
+    min-height: 790px;
+    height: 100%;
+    padding: 57px 0 89px 0;
+
+    .headerTop {
+        justify-content: space-between;
+
+        .respondToDown(lg-desktops, {
+            justify-content: center;
+        });
+
+        &__logo {
+            color: #fff;
+            font-size: 24px;
+            font-family: "Lato-Regular", sans-serif;
+            font-weight: 700;
+        }
+
+        &__menu {
+            
+            a {
+                color: #fff;
+                font-weight: 700;
+                
+                &:hover, &:focus {
+                    color: #fcac45;
+                }
+            }
+        }
+    }
+
+    .headerMidle {
+        margin-top: 222px;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Open-Sans-Regular", sans-serif;
+        text-align: center;
+
+        &__title {
+            color: #999999;
+            letter-spacing: -2.2px;
+            font-size: 44px;
+
+            span {
+                color: #fcac45;
+                font-weight: 700;
+            }
+        }
+
+        &__desс {
+            font-size: 20px;
+            letter-spacing: -1px;
+            color: #fff;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .headerBottom  {
+        margin-top: 280px;
+        justify-content: center;
+
+        .headerBottom__button {
+            border-radius: 30px;
+            width: 50px;
+            height: 50px;
+
+            &:hover, &:focus {
+                color: #fcac45;
+                background-color: #000;
+                border-color: #fcac45;
+            }
+        }
+    }
+}
+

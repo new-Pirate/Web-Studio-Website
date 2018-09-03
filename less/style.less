@@ -95,3 +95,95 @@
     }
 }
 
+.aboutUsWrap {
+    background-color: #fff;
+    min-height: 612px;
+    height: 100%;
+    padding: 100px 0 100px 0;
+
+    .aboutUs {
+
+        .aboutUs__img {
+            text-align: center;
+            img {
+                .respondToDown(sm-desktops, {
+                    width: 100%;
+                });
+            }
+        }
+    
+        .aboutUs__textBlog {
+            font-family: "Open-Sans-Regular", sans-serif;
+    
+            .aboutUs__header {
+                color: #636363;
+                font-size: 20px;
+                line-height: 37.3px;
+            }
+    
+            .aboutUs__title {
+                color: #222222;
+                font-size: 34px;
+                letter-spacing: -0.68px;
+                line-height: 37.3px;
+    
+                span {
+                    font-weight: 700;
+                }
+            }
+    
+            .aboutUs__line {
+                margin-bottom: 10px;
+            }
+    
+            .aboutUs__desc {
+                color: #6c6c6c;
+                font-size: 18px;
+                letter-spacing: -0.72px;
+                line-height: 25px;
+                margin-bottom: 45px;
+            }
+    
+            .aboutUs__items {
+                
+                color: #5a5a5a;
+                font-size: 18px;
+                letter-spacing: -0.18px;
+                font-family: "Open-Sans-Semibold";
+                line-height: 25px;
+                margin-bottom: 50px;
+    
+                ul {
+                    padding-left: 20px;
+                    list-style-image: url(/images/aboutUs__Item.png);
+                }
+    
+                span {
+                    letter-spacing: -0.16px;
+                    font-style: italic;
+                    font-size: 16px;
+                    font-family: "Open-Sans-Regular", sans-serif;
+                }
+            }
+            .aboutUs__button {
+                button {
+                    color: #616161;
+                    font-size: 12px;
+                    line-height: 33.3px;
+                    letter-spacing: 0.3px;
+                    font-family: "Open Sans - Semibold";
+                    height: 45px;
+                    width: 192px;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+    
+                    &:hover, &:focus {
+                        color: #fcac45;
+                        background-color: #000;
+                        border-color: #fcac45;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

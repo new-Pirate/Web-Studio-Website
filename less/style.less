@@ -24,8 +24,9 @@
     .headerTop {
         justify-content: space-between;
 
-        .respondToDown(lg-desktops, {
-            justify-content: center;
+        .respondToDown(md-desktops, {
+            flex-direction: column;
+            align-items: center;
         });
 
         &__logo {
@@ -36,13 +37,39 @@
         }
 
         &__menu {
-            
-            a {
-                color: #fff;
-                font-weight: 700;
+            padding: 0;
+            background-color: transparent !important;
+            font-family: "Lato-Regular", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+
+            .headerTop__nav {
                 
-                &:hover, &:focus {
-                    color: #fcac45;
+                a {
+                    color: #fff;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+
+                    &:hover,
+                    &:focus {
+                        color: #fcac45;
+                        padding-bottom: 0;
+
+                        &::after {
+                            margin-top: 17px;
+                            content: "";
+                            background: url("../images/headerTop__menuLine.png") center no-repeat;
+                            background-size: cover;
+                            display: block;
+                            height: 3px;
+                            width: 100%;
+
+                            .respondToDown(md-desktops, {
+                                visibility: hidden;
+                            });
+                        }
+                    }
                 }
             }
         }
@@ -81,7 +108,7 @@
         margin-top: 280px;
         justify-content: center;
 
-        .headerBottom__button {
+        &__button {
             border-radius: 30px;
             width: 50px;
             height: 50px;
@@ -103,7 +130,7 @@
 
     .aboutUs {
 
-        .aboutUs__img {
+        &__img {
             text-align: center;
             img {
                 .respondToDown(sm-desktops, {
@@ -112,16 +139,20 @@
             }
         }
     
-        .aboutUs__textBlog {
+        &__textBlog {
             font-family: "Open-Sans-Regular", sans-serif;
-    
-            .aboutUs__header {
+            
+            .respondToDown(lg-desktops, {
+                text-align: center;
+            });
+
+            &_header {
                 color: #636363;
                 font-size: 20px;
                 line-height: 37.3px;
             }
     
-            .aboutUs__title {
+            &_title {
                 color: #222222;
                 font-size: 34px;
                 letter-spacing: -0.68px;
@@ -132,11 +163,11 @@
                 }
             }
     
-            .aboutUs__line {
+            &_line {
                 margin-bottom: 10px;
             }
     
-            .aboutUs__desc {
+            &_desc {
                 color: #6c6c6c;
                 font-size: 18px;
                 letter-spacing: -0.72px;
@@ -144,18 +175,21 @@
                 margin-bottom: 45px;
             }
     
-            .aboutUs__items {
-                
+            &_items {
                 color: #5a5a5a;
                 font-size: 18px;
                 letter-spacing: -0.18px;
                 font-family: "Open-Sans-Semibold";
                 line-height: 25px;
                 margin-bottom: 50px;
+
+                .respondToDown(lg-desktops, {
+                    text-align: left;
+                });
     
                 ul {
                     padding-left: 20px;
-                    list-style-image: url(/images/aboutUs__Item.png);
+                    list-style-image: url(../images/aboutUs__Item.png);
                 }
     
                 span {
@@ -165,8 +199,8 @@
                     font-family: "Open-Sans-Regular", sans-serif;
                 }
             }
-            .aboutUs__button {
-                button {
+            &_button {
+                .headerBottom__button {
                     color: #616161;
                     font-size: 12px;
                     line-height: 33.3px;
@@ -175,7 +209,7 @@
                     height: 45px;
                     width: 192px;
                     border: 1px solid rgba(0, 0, 0, 0.5);
-    
+
                     &:hover, &:focus {
                         color: #fcac45;
                         background-color: #000;

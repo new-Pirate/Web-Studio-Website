@@ -19,9 +19,10 @@
 .headerWrap .headerTop {
   justify-content: space-between;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .headerWrap .headerTop {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .headerWrap .headerTop__logo {
@@ -30,13 +31,39 @@
   font-family: "Lato-Regular", sans-serif;
   font-weight: 700;
 }
-.headerWrap .headerTop__menu a {
+.headerWrap .headerTop__menu {
+  padding: 0;
+  background-color: transparent !important;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.headerWrap .headerTop__menu .headerTop__nav a {
   color: #fff;
   font-weight: 700;
+  padding-bottom: 20px;
 }
-.headerWrap .headerTop__menu a:hover,
-.headerWrap .headerTop__menu a:focus {
+.headerWrap .headerTop__menu .headerTop__nav a:hover,
+.headerWrap .headerTop__menu .headerTop__nav a:focus {
   color: #fcac45;
+  padding-bottom: 0;
+}
+.headerWrap .headerTop__menu .headerTop__nav a:hover::after,
+.headerWrap .headerTop__menu .headerTop__nav a:focus::after {
+  margin-top: 17px;
+  content: "";
+  background: url("../images/headerTop__menuLine.png") center no-repeat;
+  background-size: cover;
+  display: block;
+  height: 3px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .headerWrap .headerTop__menu .headerTop__nav a:hover::after,
+  .headerWrap .headerTop__menu .headerTop__nav a:focus::after {
+    visibility: hidden;
+  }
 }
 .headerWrap .headerMidle {
   margin-top: 222px;
@@ -66,13 +93,13 @@
   margin-top: 280px;
   justify-content: center;
 }
-.headerWrap .headerBottom .headerBottom__button {
+.headerWrap .headerBottom__button {
   border-radius: 30px;
   width: 50px;
   height: 50px;
 }
-.headerWrap .headerBottom .headerBottom__button:hover,
-.headerWrap .headerBottom .headerBottom__button:focus {
+.headerWrap .headerBottom__button:hover,
+.headerWrap .headerBottom__button:focus {
   color: #fcac45;
   background-color: #000;
   border-color: #fcac45;
@@ -83,42 +110,47 @@
   height: 100%;
   padding: 100px 0 100px 0;
 }
-.aboutUsWrap .aboutUs .aboutUs__img {
+.aboutUsWrap .aboutUs__img {
   text-align: center;
 }
 @media (max-width: 576px) {
-  .aboutUsWrap .aboutUs .aboutUs__img img {
+  .aboutUsWrap .aboutUs__img img {
     width: 100%;
   }
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog {
+.aboutUsWrap .aboutUs__textBlog {
   font-family: "Open-Sans-Regular", sans-serif;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__header {
+@media (max-width: 992px) {
+  .aboutUsWrap .aboutUs__textBlog {
+    text-align: center;
+  }
+}
+.aboutUsWrap .aboutUs__textBlog_header {
   color: #636363;
   font-size: 20px;
   line-height: 37.3px;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__title {
+.aboutUsWrap .aboutUs__textBlog_title {
   color: #222222;
   font-size: 34px;
   letter-spacing: -0.68px;
   line-height: 37.3px;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__title span {
+.aboutUsWrap .aboutUs__textBlog_title span {
   font-weight: 700;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__line {
+.aboutUsWrap .aboutUs__textBlog_line {
   margin-bottom: 10px;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__desc {
+.aboutUsWrap .aboutUs__textBlog_desc {
   color: #6c6c6c;
   font-size: 18px;
   letter-spacing: -0.72px;
   line-height: 25px;
   margin-bottom: 45px;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__items {
+.aboutUsWrap .aboutUs__textBlog_items {
   color: #5a5a5a;
   font-size: 18px;
   letter-spacing: -0.18px;
@@ -126,17 +158,22 @@
   line-height: 25px;
   margin-bottom: 50px;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__items ul {
-  padding-left: 20px;
-  list-style-image: url(/images/aboutUs__Item.png);
+@media (max-width: 992px) {
+  .aboutUsWrap .aboutUs__textBlog_items {
+    text-align: left;
+  }
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__items span {
+.aboutUsWrap .aboutUs__textBlog_items ul {
+  padding-left: 20px;
+  list-style-image: url(../images/aboutUs__Item.png);
+}
+.aboutUsWrap .aboutUs__textBlog_items span {
   letter-spacing: -0.16px;
   font-style: italic;
   font-size: 16px;
   font-family: "Open-Sans-Regular", sans-serif;
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__button button {
+.aboutUsWrap .aboutUs__textBlog_button .headerBottom__button {
   color: #616161;
   font-size: 12px;
   line-height: 33.3px;
@@ -146,8 +183,8 @@
   width: 192px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__button button:hover,
-.aboutUsWrap .aboutUs .aboutUs__textBlog .aboutUs__button button:focus {
+.aboutUsWrap .aboutUs__textBlog_button .headerBottom__button:hover,
+.aboutUsWrap .aboutUs__textBlog_button .headerBottom__button:focus {
   color: #fcac45;
   background-color: #000;
   border-color: #fcac45;

@@ -103,6 +103,7 @@
   color: #fcac45;
   background-color: #000;
   border-color: #fcac45;
+  outline: none;
 }
 .aboutUsWrap {
   background-color: #fff;
@@ -140,7 +141,7 @@
 .aboutUsWrap .aboutUs__textBlog_title span {
   font-weight: 700;
 }
-.aboutUsWrap .aboutUs__textBlog_line {
+.aboutUsWrap .aboutUs__textBlog_bigLine {
   margin-bottom: 10px;
 }
 .aboutUsWrap .aboutUs__textBlog_desc {
@@ -189,4 +190,54 @@
   background-color: #000;
   border-color: #fcac45;
   background-color: #fff;
+}
+.ourTeamWrap {
+  background-color: #000;
+  min-height: 728px;
+  height: 100%;
+  padding: 100px 0 84px 0;
+}
+.ourTeamWrap .ourTeam {
+  flex-direction: column;
+  align-items: center;
+}
+.ourTeamWrap .ourTeam__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Open Sans - Semibold";
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.ourTeamWrap .ourTeam__title span {
+  font-weight: 600;
+}
+.ourTeamWrap .ourTeam__bigLine {
+  margin-bottom: 10px;
+  height: 5px;
+}
+.ourTeamWrap .ourTeam__smallLine {
+  height: 5px;
+  margin-bottom: 94px;
+}
+.ourTeamWrap .ourTeam__slider_slide_item {
+  color: #fff;
+  font-family: "Open-Sans-Regular", sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+.ourTeamWrap .ourTeam__slider_slide_item img {
+  margin-bottom: 22px;
+}
+.ourTeamWrap .ourTeam__slider_slide_item_name {
+  font-size: 20px;
+  font-weight: 700;
+}
+.ourTeamWrap .ourTeam__slider_slide_item_position {
+  margin-bottom: 22px;
+}
+.ourTeamWrap .ourTeam__slider_slide_item_desc {
+  margin-bottom: 74px;
 }

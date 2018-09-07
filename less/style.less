@@ -257,7 +257,7 @@
             margin-bottom: 94px;
         }
 
-        &__slider {
+        &__slider {         
 
             &_slide {
 
@@ -287,6 +287,86 @@
                 }
             }
             
+        }
+    }
+}
+
+.ourServicesWrap {
+    background-color: #fff;
+    min-height: 734px;
+    height: 100%;
+    padding: 100px 0 100px 0; 
+
+    .ourServices {
+        
+        &__header {
+            flex-direction: column;
+            align-items: center;
+
+            &__title {
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Open-Sans-Regular", sans-serif;
+                color: #222222;
+                font-size: 44px;
+                line-height: 37.3px;
+                font-weight: 300;
+                margin-bottom: 30px;
+                
+                span {
+                    font-family: "Open-Sans-Semibold";
+                }
+            }
+    
+            &__bigLine {
+                margin-bottom: 10px;
+                height: 5px;
+            }
+    
+            &__smallLine {
+                height: 5px;
+                margin-bottom: 94px;
+            }
+    
+            &__desc {
+                font-family: "Open-Sans-Regular", sans-serif;
+                font-size: 16px;
+                font-style: italic;
+                line-height: 24px;
+                color: #6c6c6c;
+                margin-bottom: 106px;
+            }
+        }
+
+        &__bottom {
+
+            &__item {
+                color: #222222;
+                text-align: center;
+
+                img {
+                    margin-bottom: 30px;
+                }
+
+                &_destination {
+                    text-transform: uppercase;
+                    font-family: "Open-Sans-Semibold";
+                    line-height: 24px;
+                    font-size: 25px;
+                    margin-bottom: 20px;
+
+                    .respondToDown(lg-desktops, {
+                        font-size: 20px;
+                    });
+                }
+
+                &_desc {
+                    font-family: "Open-Sans-Regular", sans-serif;
+                    line-height: 21px;
+                    font-size: 14px;
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }

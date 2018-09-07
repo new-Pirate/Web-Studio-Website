@@ -203,11 +203,12 @@
 }
 .ourTeamWrap .ourTeam__title {
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
   font-family: "Open Sans - Semibold";
   font-size: 44px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 37.3px;
   margin-bottom: 30px;
 }
 .ourTeamWrap .ourTeam__title span {
@@ -219,7 +220,7 @@
 }
 .ourTeamWrap .ourTeam__smallLine {
   height: 5px;
-  margin-bottom: 94px;
+  margin-bottom: 98px;
 }
 .ourTeamWrap .ourTeam__slider_slide_item {
   color: #fff;
@@ -304,4 +305,43 @@
   line-height: 21px;
   font-size: 14px;
   margin-bottom: 40px;
+}
+.ourClientsWrap {
+  background-color: #000;
+  min-height: 516px;
+  height: 100%;
+  padding: 100px 0 100px 0;
+}
+.ourClientsWrap .ourClients__header {
+  flex-direction: column;
+  align-items: center;
+}
+.ourClientsWrap .ourClients__header__title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: "Open-Sans-Regular", sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 37.3px;
+  margin-bottom: 30px;
+}
+.ourClientsWrap .ourClients__header__title span {
+  font-family: "Open Sans - Semibold";
+  font-weight: 600;
+}
+.ourClientsWrap .ourClients__header__bigLine {
+  margin-bottom: 10px;
+  height: 5px;
+}
+.ourClientsWrap .ourClients__header__smallLine {
+  height: 5px;
+  margin-bottom: 94px;
+}
+.ourClientsWrap .ourClients__bottom {
+  flex-direction: column;
+  align-items: center;
+}
+.ourClientsWrap .ourClients__bottom__slider_slide_item {
+  margin-bottom: 50px;
 }
